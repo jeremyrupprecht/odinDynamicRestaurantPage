@@ -1,3 +1,129 @@
-.hello {
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+
+.content {
+    position: relative;
+}
+
+.mainContainer {
+
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+}
+
+.mainLeft {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 50px;
+
+}
+
+.homeMainCaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+}
+
+.mainLeft p {
+    font-size: 1.3rem;
+}
+
+.homeMainCaption > p {
+    color: gray;
+}
+
+.mainLeft h1 {
+    font-size: 2.5rem;
+}
+
+.mainLeft button {
+    background: rgb(255,60,0);
+    background: linear-gradient(90deg, rgba(255,60,0,1) 87%, rgba(255,149,0,1) 100%);
+    padding: 17px;
+    border-radius: 10px;
+}
+
+.mainLeft button:hover {
+    background: rgb(255,60,0);
+    background: linear-gradient(90deg, rgba(255,60,0,1) 87%, rgb(255, 213, 154) 100%);
+}
+
+.mainRight {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template:  70px 1fr / 1fr;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.288);
+
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 40px;
+
+    grid-area: 1 / 1 / 2 / 2;
+    z-index: 1;
+}
+
+.navbar h2 {
+    color: rgb(235, 235, 235);
+}
+
+.mainRightImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+/* Button Underline Animation */
+
+.underlineEffect {
+    display: inline-block;
+    position: relative;
+}
+ 
+ .underlineEffect:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgba(255, 60, 0, 0.788);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+ }
+ 
+ .underlineEffect:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }

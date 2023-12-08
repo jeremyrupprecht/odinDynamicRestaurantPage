@@ -1,20 +1,27 @@
 import './style.css';
-import Icon from './testIcon.png';
+import homeBackground from './images/homeBackground.jpg';
 
- function testComponent() {
+ function generatePage() {
     
     // Test CSS
-    const element = document.createElement('div');
-    element.innerHTML = "Testing Styles..."
-    element.classList.add('hello');
+    // const element = document.createElement('div');
+    // element.innerHTML = "Testing Styles..."
+    // element.classList.add('hello');
     
     // Test assets
-    const myIcon = new Image();
-    myIcon.src = Icon;
-    element.appendChild(myIcon);
+    // const myIcon = new Image();
+    // myIcon.src = Icon;
+    // element.appendChild(myIcon);
 
-    return element;
- }
+    const mainRightSide = document.querySelector('.mainRight');
+    const homeBackgroundImg = new Image();
+    homeBackgroundImg.src = homeBackground;
+    homeBackgroundImg.classList.add('mainRightImg');
+    mainRightSide.appendChild(homeBackgroundImg);
 
-document.body.appendChild(testComponent());
-console.log("testing...");
+
+    // return element;
+}
+
+// document.body.appendChild(testComponent());
+generatePage();
