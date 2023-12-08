@@ -11,6 +11,9 @@ function generateHomePage() {
     const menuButtonMain = generateElement('button', 'menu', homeMainCaption, undefined);
     generateElement('p', undefined, menuButtonMain, 'Discover Menu');
 
+    // PUT THE FOLLOWING INTO IT'S OWN FUNCTION IN ITS OWN FILE
+    // SINCE EACH PAGE NEEDS THE GRID STRUCTURE AND NAVBAR
+
     const mainRight = generateElement('div', 'mainRight', mainContainer, undefined);
     const navBar = generateElement('div', 'navbar', mainRight , undefined);
 

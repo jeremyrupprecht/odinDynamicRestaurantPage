@@ -7,7 +7,7 @@ import {generateContactPage} from './contact.js'
 
  function loadPage() {
 
-    generateHomePage();
+    // generateHomePage();
     // generateMenuPage();
     // generateContactPage();
 }
