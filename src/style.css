@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-    color: white;
+    color: rgb(206, 206, 206);
 }
 
 body {
@@ -158,7 +158,7 @@ button {
 .menuPageActive {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
 
     height: 100vh;
     width: 100vw;
@@ -186,6 +186,7 @@ button {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-top: 70px;
 }
 
 .centerDiv > p:nth-child(1) {
@@ -203,7 +204,6 @@ button {
 .menuItemsGrid {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
-    /* border: 1px solid blue; */
     gap: 50px;
 }
 
@@ -229,11 +229,22 @@ button {
 }
 
 .underline {
-    width: 6.25rem;
+    flex: 1;
     border-bottom: 1px solid rgba(255, 255, 255, 0.884);
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .ingredients {
     color: rgb(161, 161, 161);
+    margin-top: 8px;
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    .menuItemsGrid {
+        grid-template: 1fr 1fr / 1fr;
+        margin-bottom: 50px;
+    }
+
 }
