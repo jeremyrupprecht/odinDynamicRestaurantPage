@@ -192,16 +192,17 @@ button {
 
 }
 
-.centerDiv > p:nth-child(1) {
+/* .centerDiv > p:nth-child(1) { */
+.discoverHeader {
     border-bottom: 1px solid rgba(255, 255, 255, 0.884);
     padding: 3px;
     font-size: 1.7rem;
     color: rgb(255, 106, 56);
-
 }
 
-.centerDiv > p:nth-child(2) {
-    font-size: 3rem;
+/* .centerDiv > p:nth-child(2) { */
+.foodMenuHeader {
+    font-size: 2.8rem;
 }
 
 .menuItemsGrid {

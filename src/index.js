@@ -44,6 +44,6 @@ function addListeners() {
     });
 }
 
-loadPage('home');
+loadPage('menu');
 
 export {loadPage}
