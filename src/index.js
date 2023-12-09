@@ -5,11 +5,45 @@ import {generateMenuPage} from './menu.js'
 import {generateContactPage} from './contact.js'
 
 
- function loadPage() {
+ function loadPage(pageType) {
+    clearPage();
+    switch(pageType) {
+        case 'home':
+            generateHomePage();
+            break;
+        case 'menu':
+            generateMenuPage();
+            break;
+        case 'contact':
+            // generateContactPage();
+            break;
 
-    // generateHomePage();
-    // generateMenuPage();
-    // generateContactPage();
+    }
+    addListeners();
 }
 
-loadPage();
+function clearPage() {
+    const content = document.getElementById('content');
+    content.innerHTML = '';
+}
+
+function addListeners() {
+    const homeButton = document.querySelector('.navHome');
+    const menuButton = document.querySelector('.navMenu');
+    const contactButton = document.querySelector('.navContact');
+    homeButton.addEventListener('click', () => {
+        loadPage('home');
+    });
+
+    menuButton.addEventListener('click', () => {
+        loadPage('menu');
+    });
+
+    contactButton.addEventListener('click', () => {
+        loadPage('contact');
+    });
+}
+
+loadPage('home');
+
+export {loadPage}

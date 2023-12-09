@@ -1,5 +1,10 @@
+import {generateNavBar} from './navbar.js'
+import {generateElement} from './generateElement.js';
+
+
 function generateMenuPage() {
-    console.log("MENU");
+    generateNavBar(true);
+    console.log('testing');
 }
 
 export {generateMenuPage}
