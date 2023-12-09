@@ -8,6 +8,7 @@
 
 body {
     background-color: rgb(10, 10, 10);
+    overflow-x: hidden;
 }
 
 button {
@@ -185,8 +186,10 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    margin-top: 70px;
+    gap: 25px;
+    margin-top: 35px;
+
+
 }
 
 .centerDiv > p:nth-child(1) {
@@ -205,6 +208,7 @@ button {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     gap: 50px;
+    margin-bottom: 50px;
 }
 
 .menuCard {
