@@ -37,7 +37,6 @@ button {
     justify-content: center;
     align-items: center;
     position: relative;
-
 }
 
 .homeMainCaption {
@@ -80,6 +79,7 @@ button {
 
     display: grid;
     grid-template:  70px 1fr / 1fr;
+
 }
 
 .navbar {
@@ -128,6 +128,29 @@ button {
  .underlineEffect:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .mainLeft {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .mainRightImg {
+        display: none;
+    }
+
+    .mainRight {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .homeMainCaption {
+        align-items: center;
+    }
+
+    .mainLeft h1 {
+        text-align: center;
+    }
 }
 
 /* Menu Page  */
