@@ -306,6 +306,10 @@ input {
     grid-column: 1 / 4;
 }
 
+input[type="month"], input[type="time"] {
+    color-scheme: dark;
+}
+
 .inputsGrid button {
     background-color: rgb(255, 81, 23);
     grid-column: 1 / 3;
