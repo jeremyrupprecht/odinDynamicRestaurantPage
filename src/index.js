@@ -15,7 +15,7 @@ import {generateContactPage} from './contact.js'
             generateMenuPage();
             break;
         case 'contact':
-            // generateContactPage();
+            generateContactPage();
             break;
 
     }
@@ -44,6 +44,6 @@ function addListeners() {
     });
 }
 
-loadPage('menu');
+// loadPage('contact');
 
 export {loadPage}

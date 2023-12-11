@@ -7,8 +7,8 @@ function generateMenuPage() {
 
     const content = document.getElementById('content');
     const centerDiv = generateElement('div', 'centerDiv', content, undefined);
-    const discoverP = generateElement('div', 'discoverHeader', centerDiv, 'Discover');
-    const outFoodMenuP = generateElement('div', 'foodMenuHeader', centerDiv, 'Our Food Menu');
+    generateElement('div', 'discoverHeader', centerDiv, 'Discover');
+    generateElement('div', 'foodMenuHeader', centerDiv, 'Our Food Menu');
 
     const menuItems = [
         {title: 'Grilled Salmon',
@@ -48,11 +48,8 @@ function generateMenuPage() {
 }
 
 function generateMenuCard(parent, menuTitle, menuItems) {
-
-    console.log(menuItems);
-
     const menuCard = generateElement('div', 'menuCard', parent, undefined);
-    const title = generateElement('div', 'menuTitle', menuCard, menuTitle);
+    generateElement('div', 'menuTitle', menuCard, menuTitle);
     generateMenuItem(menuCard, menuItems[0].title, menuItems[0].price, menuItems[0].ingredients);
     generateMenuItem(menuCard,  menuItems[1].title, menuItems[1].price, menuItems[1].ingredients);
 }
@@ -60,10 +57,10 @@ function generateMenuCard(parent, menuTitle, menuItems) {
 function generateMenuItem(parent, foodTitle, price, ingredients) {
     const menuItem = generateElement('div', 'menuItem', parent, undefined);
     const itemTitle = generateElement('div', 'itemTitle', menuItem, undefined);
-    const foodTitleP = generateElement('p', undefined, itemTitle, foodTitle);
-    const underLine = generateElement('div', 'underline', itemTitle, undefined);
-    const priceP = generateElement('p', undefined, itemTitle, price);
-    const ingredientsP = generateElement('p', 'ingredients', menuItem, ingredients);
+    generateElement('p', undefined, itemTitle, foodTitle);
+    generateElement('div', 'underline', itemTitle, undefined);
+    generateElement('p', undefined, itemTitle, price);
+    generateElement('p', 'ingredients', menuItem, ingredients);
 }
 
 export {generateMenuPage}
