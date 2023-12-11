@@ -189,7 +189,6 @@ button {
     margin-top: 35px;
 }
 
-/* .centerDiv > p:nth-child(1) { */
 .discoverHeader {
     border-bottom: 1px solid rgba(255, 255, 255, 0.884);
     padding: 3px;
@@ -197,7 +196,6 @@ button {
     color: rgb(255, 106, 56);
 }
 
-/* .centerDiv > p:nth-child(2) { */
 .foodMenuHeader {
     font-size: 2.8rem;
 }
@@ -282,7 +280,6 @@ button {
     display: grid;
     grid-template: repeat(3, 2.7rem) 4rem / 1fr 1fr 1fr;
     gap: 25px;
-    /* border: 1px solid blue; */
 }
 label {
     align-self: end;
@@ -320,7 +317,7 @@ input[type="month"], input[type="time"] {
     color: white;
 }
 
-/* Form validation styling */
+/* Contact Page Form Validation Styling */
 
 input:focus:valid {
     background-color: rgba(0, 128, 0, 0.479);

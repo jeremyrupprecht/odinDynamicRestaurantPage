@@ -1,5 +1,4 @@
 import './style.css';
-import homeBackground from './images/homeBackground.jpg';
 import {generateHomePage} from './home.js'
 import {generateMenuPage} from './menu.js'
 import {generateContactPage} from './contact.js'
@@ -17,7 +16,6 @@ import {generateContactPage} from './contact.js'
         case 'contact':
             generateContactPage();
             break;
-
     }
     addListeners();
 }
@@ -44,6 +42,6 @@ function addListeners() {
     });
 }
 
-// loadPage('contact');
+loadPage('home');
 
 export {loadPage}
