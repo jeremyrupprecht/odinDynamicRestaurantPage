@@ -369,24 +369,18 @@ input:not(:focus):valid {
     color: rgb(199, 199, 199)
 }
 
-.footerContainer h1 {
-
-}
-
 .orangeSpan, .footerItem > p:first-child {
     color: rgb(255, 106, 56);
 }
 
 .footerAcross {
     display: flex;
-    /* border: 1px solid blue; */
     justify-content: space-around;
     margin-top: 30px;
     gap: 20px;
 }
 
 .footerItem {
-   /* border: 1px solid red; */
    max-width: 450px;
 }
 
@@ -396,10 +390,6 @@ input:not(:focus):valid {
 
 .aboutUs > p:nth-child(2), .footerItem input, .contactUsGrid {
     margin-top: 20px;
-}
-
-.footerItem p:not(:first-child) {
-    /* color: rgb(196, 196, 196); */
 }
 
 .footerItem input {
@@ -441,6 +431,10 @@ input:not(:focus):valid {
     display: grid;
     grid-template: repeat(8, 1rem) / 2fr;
     gap: 7px;
+}
+
+.contactUsGrid > p {
+    white-space: nowrap;
 }
 
 @media only screen and (max-width: 600px) {
