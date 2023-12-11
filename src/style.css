@@ -263,10 +263,9 @@ button {
 }
 
 .form {
-    background-color: transparent; /* rgba(0, 0, 0, 0.575); */
+    background-color: transparent;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 20px;
 }
 
@@ -319,4 +318,25 @@ input[type="month"], input[type="time"] {
 
 ::placeholder {
     color: white;
+}
+
+/* Form validation styling */
+
+input:focus:valid {
+    background-color: rgba(0, 128, 0, 0.479);
+}
+
+input:focus:invalid {
+    background-color: rgba(255, 0, 0, 0.363);
+}
+
+input:not(:focus):valid {
+    background-color: rgba(0, 128, 0, 0.479);
+}
+
+@media only screen and (max-width: 600px) { 
+
+    .inputsGrid {
+        grid-template: repeat(3, 2.7rem) 4rem / 1fr;
+    }
 }
