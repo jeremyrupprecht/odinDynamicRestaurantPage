@@ -1,19 +1,20 @@
 import { generateElement } from "./generateElement";
 
-function generateNavBar(menuOrContactPageActive) {
+function generateNavBar(makeMainContainerShort) {
 
     const content = document.getElementById('content');
 
-    let containerClass = 'mainContainer';
-    if (menuOrContactPageActive) {
-        containerClass = 'mainContainerMenuOrContactPage';
-        content.classList.add('menuPageActive');
+    let containerClass = 'mainContainerLong';
+    if (makeMainContainerShort) {
+        containerClass = 'mainContainerShort';
+        content.classList.add('makeContentFullScreenFlexbox');
     }
 
     const mainContainer = generateElement('div', containerClass, content, undefined);
     const mainLeft = generateElement('div', 'mainLeft', mainContainer, undefined);
 
-    if (menuOrContactPageActive) {
+    // Fill in the left side of the navbar background
+    if (makeMainContainerShort) {
         generateElement('div', 'navbarLeft', mainLeft, undefined);
     }
 

@@ -6,6 +6,12 @@
     color: rgb(206, 206, 206);
 }
 
+body, html {
+    height: 100%;
+}
+
+/*  */
+
 body {
     background-color: rgb(10, 10, 10);
     overflow-x: hidden;
@@ -22,7 +28,7 @@ button {
     position: relative;
 }
 
-.mainContainer {
+.mainContainerLong {
 
     height: 100vh;
     width: 100vw;
@@ -155,16 +161,19 @@ button {
 
 /* Menu Page  */
 
-.menuPageActive {
+.makeContentFullScreenFlexbox {
     display: flex;
     flex-direction: column;
     justify-content: start;
 
-    height: 100vh;
+    /* height: 100vh; */
+    height: 100%;
     width: 100vw;
+
+    gap: 30px;
 }
 
-.mainContainerMenuOrContactPage {
+.mainContainerShort {
     height: auto;
     width: 100vw;
 
@@ -251,13 +260,19 @@ button {
 /* Contact Page  */
 
 .contactBackground {
-    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
 
-    height: 100vh;
-    width: 100vw; 
+    width: 100%;
+    height: 100%;
+
     object-fit: cover;
     z-index: -1;
     opacity: 0.8;
+
 }
 
 .form {
@@ -319,6 +334,8 @@ input[type="month"], input[type="time"] {
 
 /* Contact Page Form Validation Styling */
 
+/* -------------------- */
+
 input:focus:valid {
     background-color: rgba(0, 128, 0, 0.479);
 }
@@ -336,4 +353,111 @@ input:not(:focus):valid {
     .inputsGrid {
         grid-template: repeat(3, 2.7rem) 4rem / 1fr;
     }
+}
+
+/* -------------------- */
+
+.footerContainer {
+    width: 100%;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.363);
+    margin-top: auto;
+    padding: 40px;
+}
+
+.footerContainer * {
+    color: rgb(199, 199, 199)
+}
+
+.footerContainer h1 {
+
+}
+
+.orangeSpan, .footerItem > p:first-child {
+    color: rgb(255, 106, 56);
+}
+
+.footerAcross {
+    display: flex;
+    /* border: 1px solid blue; */
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.footerItem {
+   /* border: 1px solid red; */
+   max-width: 450px;
+}
+
+.footerItem > p:first-child {
+    font-size: 1.5rem;
+}
+
+.aboutUs > p:nth-child(2), .footerItem input, .contactUsGrid {
+    margin-top: 20px;
+}
+
+.footerItem p:not(:first-child) {
+    /* color: rgb(196, 196, 196); */
+}
+
+.footerItem input {
+    height: 2.7rem;
+    width: 13.5rem;
+}
+
+.footerItem form {
+    position: relative;
+}
+
+.footerItem button {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background-color: rgb(255, 81, 23);
+    border-radius: 10px;
+    top: 1.563rem;
+    right: 0.275rem;
+}
+
+.rightArrowImg {
+    height: 1.8rem;
+    width: 1.8rem;
+    padding-top: 4px;
+    padding-left: 1px;
+}
+
+.footerAcross > .footerItem:nth-child(2) {
+    white-space: nowrap;
+}
+
+.flexBox {
+    display: flex;
+    gap: 10px;
+}
+
+.contactUsGrid {
+    display: grid;
+    grid-template: repeat(8, 1rem) / 2fr;
+    gap: 7px;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .footerContainer {
+        height: auto;
+    }
+
+    .footerAcross {
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footerItem button {
+        left: 11.275rem;
+    }
+
 }

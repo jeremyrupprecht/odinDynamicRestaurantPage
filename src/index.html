@@ -6,8 +6,97 @@
     <title>Odin Dyanmic Restaurant Page</title>
 </head>
 <body>
-    <div id="content" class="menuPageActive"></div>
+    <div id="content" class="makeContentFullScreenFlexbox">
+
+        <div class="mainContainerShort">
+            <div class="mainLeft">
+                <div class="navbarLeft"></div>
+            </div>
+
+            <div class="mainRight">
+                <div class="navbar">
+                    <div class="navHome underlineEffect">
+                        <button>
+                            <h2>Home</h2>
+                        </button>
+                    </div>
+                    <div class="navMenu">
+                        <button class="menu underlineEffect">
+                            <h2>Menu</h2>
+                        </button>
+                    </div>
+                    <div class="namContact underlineEffect">
+                        <button>
+                            <h2>Contact</h2>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="images/contactBackground.jpg" alt="background..." class="contactBackground">
+        <div class="centerDiv">
+            <form class="form">
+                <p class="letsP">Lets</p>
+                <h1 class="bookH1">Book a Table</h1>
+                <div class="inputsGrid">
+                    <label for="pickDate">Date *</label>
+                    <label for="pickTime">Time *</label>
+                    <label for="pickGuests">Guests *</label>
+
+                    <input type="month" id="pickDate" required>
+                    <input type="time" id="pickTime" required>
+                    <input type="number" id="pickGuests" min="0" max="10" required placeholder="0">
+                    <input type="email" id="enterEmail" required placeholder="Email *">
+                    <button type="submit">Check Availability</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="footerContainer"> 
+            
+            <h1><span class="orangeSpan">The</span> Restaurant</h1>
+            <div class="footerAcross">
+                <div class="footerItem aboutUs">
+                    <p>About Us</p>
+                    <p>Lorem ipsum dolor sit amet
+                       consectetur adipisicing elit.
+                       Quos architecto ad deserunt id, nisi
+                       possimus animi impedit perferendis.</p>
+                </div>
+
+                <div class="footerItem getNews">
+                    <p>Get News & Offers</p>
+                    <form>
+                        <input type="email" id="enterEmailNews&Offers" required placeholder="Enter your email">
+                        <button type="submit">
+                            <img src="images/rightArrow.svg" class="rightArrowImg" alt="">
+                        </button>
+                    </form>
+                </div>
+
+                <div class="footerItem contactUs">
+                    <p>Contact Us</p>
+                    <div class="contactUsGrid">
+                        <p>Call Us (403) 000-0000</p>
+                        <p>138 Lorem Ipsum Way NW</p>
+                        <p>Ipsum, Lorem T1A 1A1</p>
+                        <p>Lorem@Ipsum@gmail.com</p>
+                        <p>Monday-Wednesday-Sunday</p>
+                        <p>8:00AM - 10:30PM</p>
+                        <p>8:00AM - 10:30PM</p>
+                        <p>8:00AM - 10:30PM</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 
     <script src="bundle.js"></script>
+
 </body>
 </html>
